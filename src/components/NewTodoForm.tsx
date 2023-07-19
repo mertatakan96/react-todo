@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function NewTodoForm(props) {
+export const NewTodoForm: React.FC<{addTodo:Function}> = (props) => {
   const [description, setDescription] = useState("");
   const [assigned, setAssigned] = useState("");
 
@@ -15,7 +15,7 @@ function NewTodoForm(props) {
   return (
     <div className="mt-5">
       <form>
-        <div children="mb-3">
+        <div className="mb-3">
           <label className="form-label">Assigned</label>
           <input
             type="text"
@@ -47,4 +47,3 @@ function NewTodoForm(props) {
   );
 }
 
-export default NewTodoForm;
